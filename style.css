@@ -7,10 +7,11 @@
 	--primary: #008da8;
 	--primary-hover: #3dbdab;
 	--primary-light: #c2e4ea;
-	--neutral: #787c7c;
+	--neutral: #5A5C5C;
 	--neutral-dark: #262626;
 	--neutral-light: #e5e5e5;
 	--neutral-bg: #f0fafb;
+	--placeholder: #A0A0A0;
 	--secondary: #3dbdab;
 	--secondary-bg: #b6e1db;
 
@@ -176,7 +177,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-	color: var(--neutral);
+	color: var(--placeholder);
 }
 
 /* ============================================

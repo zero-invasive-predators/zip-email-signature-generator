@@ -16,7 +16,7 @@ const BRAND_CONFIG = {
 			file: "logo-zip-big",
 			alt: "Zero Invasive Predators",
 			url: "https://zip.org.nz",
-			width: 200,
+			width: 180,
 		},
 		secondaryLogos: [
 			{
