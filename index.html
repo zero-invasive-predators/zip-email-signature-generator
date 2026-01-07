@@ -1,129 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ZIP – Email signature generator</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="container">
-			<header>
-				<h1>ZIP – Email signature generator</h1>
-				<p>Create your email signature for Zero Invasive Predators</p>
-			</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIP – Email signature generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="generator" class="generator-section">
+      <div class="container">
+        <header>
+          <img
+            class="logo"
+            src="images/logo-zip-big@2x.png"
+            alt="Zero Invasive Predators logo"
+            width="250"
+          />
 
-			<main>
-				<section class="preview-section">
-					<div class="preview-header">
-						<h2>Preview</h2>
-						<button id="copy-button" type="button">
-							Copy signature
-						</button>
-					</div>
-					<div id="preview" class="preview-area">
-						<!-- Preview will be generated here -->
-					</div>
-					<div
-						id="copy-feedback"
-						class="copy-feedback"
-						role="status"
-						aria-live="polite"
-					></div>
-				</section>
-				<section class="form-section">
-					<h2>Your details</h2>
-					<form id="signature-form">
-						<div class="form-group">
-							<label for="brand">Organisation</label>
-							<p class="help-text">
-								Select the organisation you most closely
-								represent
-							</p>
-							<select id="brand" name="brand">
-								<option value="zip">
-									Zero Invasive Predators
-								</option>
-								<option value="pfsw">
-									Predator Free South Westland
-								</option>
-								<option value="tmap">
-									Te Manapuna Aoraki Project
-								</option>
-								<option value="pfr">
-									Predator Free Rakiura
-								</option>
-							</select>
-						</div>
+          <h1>
+            Email signature generator
+            <a href="#howto">How to use this tool &darr;</a>
+          </h1>
+        </header>
 
-						<div class="form-group">
-							<label for="name">Name</label>
-							<input
-								type="text"
-								id="name"
-								name="name"
-								placeholder="Jane Smith"
-							/>
-						</div>
+        <main>
+          <section class="preview-section">
+            <div class="preview-header">
+              <h2>Preview</h2>
+              <button id="copy-button" type="button">Copy signature</button>
+            </div>
+            <div id="preview" class="preview-area">
+              <!-- Preview will be generated here -->
+            </div>
+            <div
+              id="copy-feedback"
+              class="copy-feedback"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </section>
+          <section class="form-section">
+            <h2>Your details</h2>
+            <form id="signature-form">
+              <div class="form-group">
+                <label for="brand">Organisation</label>
+                <p class="help-text">
+                  Select the organisation you most closely represent
+                </p>
+                <select id="brand" name="brand">
+                  <option value="zip">Zero Invasive Predators</option>
+                  <option value="pfsw">Predator Free South Westland</option>
+                  <option value="tmap">Te Manapuna Aoraki Project</option>
+                  <option value="pfr">Predator Free Rakiura</option>
+                </select>
+              </div>
 
-						<div class="form-group">
-							<label for="jobTitle">Job title</label>
-							<input
-								type="text"
-								id="jobTitle"
-								name="jobTitle"
-								placeholder="Project Manager"
-							/>
-						</div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Smith"
+                />
+              </div>
 
-						<div class="form-group">
-							<label for="jobTitleMaori">Te reo job title</label>
-							<input
-								type="text"
-								id="jobTitleMaori"
-								name="jobTitleMaori"
-								placeholder="Kaiwhakahaere Kaupapa"
-							/>
-						</div>
+              <div class="form-group">
+                <label for="jobTitle">Job title</label>
+                <input
+                  type="text"
+                  id="jobTitle"
+                  name="jobTitle"
+                  placeholder="Project Manager"
+                />
+              </div>
 
-						<div class="form-group">
-							<label for="email">Email address</label>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="jane.smith@zip.org.nz"
-							/>
-						</div>
+              <div class="form-group">
+                <label for="jobTitleMaori">Te reo job title</label>
+                <input
+                  type="text"
+                  id="jobTitleMaori"
+                  name="jobTitleMaori"
+                  placeholder="Kaiwhakahaere Kaupapa"
+                />
+              </div>
 
-						<div class="form-group">
-							<label for="phone">Phone number</label>
-							<input
-								type="tel"
-								id="phone"
-								name="phone"
-								placeholder="+64 21 123 4567"
-							/>
-						</div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane.smith@zip.org.nz"
+                />
+              </div>
 
-						<div class="form-group">
-							<label for="notes">Additional notes</label>
-							<p class="help-text">
-								What other information is useful for people to
-								know about contacting you?
-							</p>
-							<textarea
-								id="notes"
-								name="notes"
-								placeholder="e.g. Available Monday–Thursday, best reached via WhatsApp"
-								rows="3"
-							></textarea>
-						</div>
-					</form>
-				</section>
-			</main>
-		</div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+64 21 123 4567"
+                />
+              </div>
 
-		<script src="main.js"></script>
-	</body>
+              <div class="form-group">
+                <label for="notes">Additional notes</label>
+                <p class="help-text">
+                  What other information is useful for people to know about
+                  contacting you?
+                </p>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  placeholder="e.g. Available Monday–Thursday, best reached via WhatsApp"
+                  rows="3"
+                ></textarea>
+              </div>
+            </form>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <section id="howto" class="howto-section">
+      <div class="container">
+        <h2>
+          How to use this tool <a href="#generator">Back to top &uarr;</a>
+        </h2>
+        <ol class="howto-steps">
+          <li>
+            <p>
+              Generate your signature using this tool, and click
+              <strong>"Copy signature"</strong> to copy it to your clipboard
+            </p>
+          </li>
+          <li>
+            <p>In Gmail, go to Settings (⚙️ gear icon) → See all settings</p>
+            <img
+              src="images/howto/1-settings-see-all-settings.png"
+              alt="Gmail settings menu showing 'See all settings' button"
+            />
+          </li>
+          <li>
+            <p>
+              Scroll down to your signature settings. Either select an existing
+              signature and delete the contents, or create a new one
+            </p>
+            <img
+              src="images/howto/2-signature-panel-before.png"
+              alt="Gmail signature settings panel before adding signature"
+            />
+          </li>
+          <li>
+            <p>Paste in your new signature</p>
+            <img
+              src="images/howto/3-signature-panel-after.png"
+              alt="Gmail signature settings panel after pasting signature"
+            />
+          </li>
+          <li>
+            <p>Scroll down and save all settings</p>
+            <img
+              src="images/howto/4-save-settings.png"
+              alt="Gmail save settings button at bottom of page"
+            />
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
 </html>
