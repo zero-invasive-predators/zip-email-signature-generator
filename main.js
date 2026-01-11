@@ -302,7 +302,7 @@ function generateSignature(formData) {
                         ${brand.urls
                           .map(
                             (url) =>
-                              `<a href="${url.url}" style="color: ${COLORS.link}; text-decoration: none;">${url.display}</a>`
+                              `<a href="${url.url}" target="_blank" style="color: ${COLORS.link}; text-decoration: none;">${url.display}</a>`
                           )
                           .join(
                             ' <span style="color: ${COLORS.textMuted}; margin: 0 8px;">•</span> '
