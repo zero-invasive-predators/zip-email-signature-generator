@@ -113,6 +113,8 @@ body {
 
 .preview-section {
   align-self: start;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 header {
@@ -276,6 +278,39 @@ button:focus {
 }
 
 /* ============================================
+   Mobile Notice
+   ============================================ */
+
+.mobile-notice {
+  display: none;
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: var(--spacer-3);
+  margin-bottom: var(--spacer-4);
+}
+
+.mobile-notice p {
+  margin: 0;
+  color: var(--neutral-dark);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 500px) {
+  .mobile-notice {
+    display: block;
+  }
+}
+
+.howto-intro {
+	display: none;
+	@media (max-width: 500px) {
+		display: block;
+	}
+}
+
+/* ============================================
    How To Section
    ============================================ */
 
@@ -285,6 +320,24 @@ button:focus {
 
 .howto-section {
   background-color: #ffffff;
+}
+
+.howto-intro {
+  background-color: var(--primary-light);
+  border: 2px solid var(--primary);
+  padding: var(--spacer-3);
+  margin-bottom: var(--spacer-4);
+  border-radius: 8px;
+}
+
+.howto-intro p {
+  margin: 0 0 var(--spacer-2) 0;
+  color: var(--neutral-dark);
+  line-height: 1.6;
+}
+
+.howto-intro p:last-child {
+  margin-bottom: 0;
 }
 
 .howto-steps {
