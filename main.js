@@ -34,7 +34,7 @@ const BRAND_CONFIG = {
       },
       {
         file: "logo-tmap",
-        alt: "Te Manapuna Aoraki Project",
+        alt: "Te Manahuna Aoraki Project",
         url: "https://temanahunaaoraki.org",
         width: 108,
       },
@@ -63,11 +63,11 @@ const BRAND_CONFIG = {
     ],
   },
   tmap: {
-    name: "Te Manapuna Aoraki Project",
+    name: "Te Manahuna Aoraki Project",
     logos: [
       {
         file: "logo-tmap",
-        alt: "Te Manapuna Aoraki Project",
+        alt: "Te Manahuna Aoraki Project",
         url: "https://temanahunaaoraki.org",
         width: 108,
       },
