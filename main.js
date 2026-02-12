@@ -41,6 +41,16 @@ const BRAND_CONFIG = {
     ],
     urls: [{ url: "https://zip.org.nz", display: "zip.org.nz" }],
   },
+  "zip-no-logos": {
+    name: "Zero Invasive Predators",
+    primaryLogo: {
+      file: "logo-zip-big",
+      alt: "Zero Invasive Predators",
+      url: "https://zip.org.nz",
+      width: 180,
+    },
+    urls: [{ url: "https://zip.org.nz", display: "zip.org.nz" }],
+  },
   pfsw: {
     name: "Predator Free South Westland",
     logos: [
@@ -171,9 +181,29 @@ function generateSignature(formData) {
 
   // Build logo section - special layout for ZIP brand
   let logoSection;
-  if (formData.brand === "zip") {
-    // ZIP: Primary logo on top (separate table), secondary logos in a row below (separate table)
+  if (formData.brand === "zip" || formData.brand === "zip-no-logos") {
+    // ZIP: Primary logo on top (separate table), optionally secondary logos in a row below
     const primaryLogo = brand.primaryLogo;
+    const secondaryLogosRow = brand.secondaryLogos ? `
+                <tr>
+                    <td style="padding: 0;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                ${brand.secondaryLogos
+                                  .map(
+                                    (logo) => `
+                                <td style="padding-right: 24px;">
+                                    <a href="${logo.url}" target="_blank" style="display: block; text-decoration: none;">
+                                        <img src="${imagePath}/${logo.file}@2x.png" alt="${logo.alt}" width="${logo.width}" style="display: block; max-width: ${logo.width}px; height: auto; border: 0;">
+                                    </a>
+                                </td>`
+                                  )
+                                  .join("")}
+                            </tr>
+                        </table>
+                    </td>
+                </tr>` : '';
+    
     logoSection = `
                 <tr>
                     <td style="padding: 16px 0 4px 0;">
@@ -195,25 +225,7 @@ function generateSignature(formData) {
                             </tr>
                         </table>
                     </td>
-                </tr>
-                <tr>
-                    <td style="padding: 0;">
-                        <table cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                ${brand.secondaryLogos
-                                  .map(
-                                    (logo) => `
-                                <td style="padding-right: 24px;">
-                                    <a href="${logo.url}" target="_blank" style="display: block; text-decoration: none;">
-                                        <img src="${imagePath}/${logo.file}@2x.png" alt="${logo.alt}" width="${logo.width}" style="display: block; max-width: ${logo.width}px; height: auto; border: 0;">
-                                    </a>
-                                </td>`
-                                  )
-                                  .join("")}
-                            </tr>
-                        </table>
-                    </td>
-                </tr>`;
+                </tr>${secondaryLogosRow}`;
   } else {
     // Other brands: All logos in a single row
     logoSection = `

@@ -16,7 +16,12 @@ If this page moves or URLs change, everyone will need to regenerate their signat
 ## Creating Your Signature
 
 1. Visit the [signature generator](https://zero-invasive-predators.github.io/zip-email-signature-generator/)
-2. Select the organisation you most closely represent from the dropdown
+2. Select the organisation you most closely represent from the dropdown:
+   - **Zero Invasive Predators** – includes logos for all programmes (PFSW, PFR, TMAP)
+   - **Zero Invasive Predators (no programme logos)** – ZIP only, without subbrand logos
+   - **Predator Free South Westland** – includes PFSW and ZIP logos
+   - **Te Manahuna Aoraki Project** – includes TMAP and ZIP logos
+   - **Predator Free Rakiura** – includes PFR and ZIP logos
 3. Fill in all the details you'd like to include (name, job title, email, phone, te reo Māori job title)
 4. Click "Copy signature"
 5. Paste into Gmail's signature settings
